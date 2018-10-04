@@ -1,0 +1,3 @@
+El proyecto en angular esta en la carpeta cliente.
+Antes de ejecutar el proyecto se debe instalar las dependecias con npm i o npm install
+Una vez instaladas las dependecias se puede ejecutar la aplicacion con npm start
