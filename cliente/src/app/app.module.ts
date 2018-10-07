@@ -79,7 +79,7 @@ import {AppFooterComponent} from './app.footer.component';
 
 import {AppRightpanelComponent} from './app.rightpanel.component';
 import {AppInlineProfileComponent} from './app.profile.component';
-import {DashboardDemoComponent} from './demo/view/dashboarddemo.component';
+import {DashboardDemoComponent} from './site/view/dashboarddemo.component';
 
 @NgModule({
     imports: [
@@ -159,7 +159,7 @@ import {DashboardDemoComponent} from './demo/view/dashboarddemo.component';
         AppMenuComponent,
         AppSubMenuComponent,
         AppTopbarComponent,
-        AppFooterComponent,        
+        AppFooterComponent,
         AppRightpanelComponent,
         AppInlineProfileComponent,
         DashboardDemoComponent
