@@ -19,47 +19,8 @@ export class AppMenuComponent implements OnInit {
     constructor(public app: AppComponent) {}
 
     ngOnInit() {
-        this.model = [
-            {label: 'Dashboard', icon: 'dashboard', routerLink: ['/']},
-            {
-                label: 'Themes', icon: 'palette', badge: '6',
-                items: [
-                    {label: 'Indigo - Pink', icon: 'brush', command: (event) => {this.changeTheme('indigo'); }},
-                    {label: 'Brown - Green', icon: 'brush', command: (event) => {this.changeTheme('brown'); }},
-                    {label: 'Blue - Amber', icon: 'brush', command: (event) => {this.changeTheme('blue'); }},
-                    {label: 'Blue Grey - Green', icon: 'brush', command: (event) => {this.changeTheme('blue-grey'); }},
-                    {label: 'Dark - Blue', icon: 'brush', command: (event) => {this.changeTheme('dark-blue'); }},
-                    {label: 'Dark - Green', icon: 'brush', command: (event) => {this.changeTheme('dark-green'); }},
-                    {label: 'Green - Yellow', icon: 'brush', command: (event) => {this.changeTheme('green'); }},
-                    {label: 'Purple - Cyan', icon: 'brush', command: (event) => {this.changeTheme('purple-cyan'); }},
-                    {label: 'Purple - Amber', icon: 'brush', command: (event) => {this.changeTheme('purple-amber'); }},
-                    {label: 'Teal - Lime', icon: 'brush', command: (event) => {this.changeTheme('teal'); }},
-                    {label: 'Cyan - Amber', icon: 'brush', command: (event) => {this.changeTheme('cyan'); }},
-                    {label: 'Grey - Deep Orange', icon: 'brush', command: (event) => {this.changeTheme('grey'); }}
-                ]
-            },
-            {
-                label: 'Customization', icon: 'settings_application',
-                items: [
-                    {label: 'Compact Size', icon: 'fiber_manual_record', command: () => this.app.layoutCompact = true},
-                    {label: 'Material Size', icon: 'fiber_smart_record',  command: () => this.app.layoutCompact = false},
-                    {label: 'Static Menu', icon: 'menu',  command: () => this.app.changeToStaticMenu()},
-                    {label: 'Overlay Menu', icon: 'exit_to_app',  command: () => this.app.changeToOverlayMenu()},
-                    {label: 'Slim Menu', icon: 'more_vert',  command: () => this.app.changeToSlimMenu()},
-                    {label: 'Horizontal Menu', icon: 'border_horizontal',  command: () => this.app.changeToHorizontalMenu()},
-                    {label: 'Light Menu', icon: 'label_outline',  command: () => this.app.darkMenu = false},
-                    {label: 'Dark Menu', icon: 'label',  command: () => this.app.darkMenu = true},
-                    {label: 'Inline Profile', icon: 'contacts',  command: () => this.app.profileMode = 'inline'},
-                    {label: 'Top Profile', icon: 'person_pin',  command: () => this.app.profileMode = 'top'},
-                ]
-            },
-            {
-                label: 'Template Pages', icon: 'get_app',
-                items: [
-                    {label: 'Login Page', icon: 'verified_user', url: 'assets/pages/login.html', target: '_blank'}
-                ]
-            }
-        ];
+        const identity = JSON.parse(localStorage.getItem('identity'));
+        this.model = identity.toc;
     }
 
     changeTheme(theme) {
@@ -163,9 +124,9 @@ export class AppSubMenuComponent {
 
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
-            setTimeout(() => {
-              this.app.layoutMenuScrollerViewChild.moveBar();
-            }, 450);
+            // setTimeout(() => {
+            //   this.app.layoutMenuScrollerViewChild.moveBar();
+            // }, 450);
             event.preventDefault();
         }
 

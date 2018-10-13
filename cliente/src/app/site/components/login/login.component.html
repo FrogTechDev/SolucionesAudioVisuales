@@ -1,0 +1,36 @@
+
+<div class="card login-panel ui-fluid">
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <!-- <img src="assets/erpHammer/images/hammerLogoV.png" width="120"> -->
+        </div>
+        <form #loginForm class="form-login" (ngSubmit)="doLogin(loginForm)">
+            <div class="ui-g-12 form-group">
+                <span class="md-inputfield">
+                    <input pInputText type="text" name="Usuario" #Usuario="ngModel" [(ngModel)]="user.Usuario"  class="ui-inputtext ui-corner-all ui-state-default ui-widget" required />
+                    <label>Usuario</label>
+                </span>
+                <span *ngIf="!Usuario.valid && Usuario.touched">El usuario no es valido</span>
+            </div>
+            <div class="ui-g-12">
+                <span class="md-inputfield">
+                    <input pInputText type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" class="ui-inputtext ui-corner-all ui-state-default ui-widget" required/>
+                    <label>Contraseña</label>
+                </span>
+                <span *ngIf="!Password.valid && Password.touched">La contraseña no es valida</span>
+            </div>
+            <div class="ui-g-12">
+                <input type="submit" value="Entrar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"/>
+                <!-- <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" [routerLink]="['/master']">
+                    <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-person"></span>
+                    <span class="ui-button-text ui-c">Entrar</span>
+                </button> -->
+                <button type="button" class="secondary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+                    <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-help"></span>
+                    <span class="ui-button-text ui-c">Registrarse</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- <p-messages [value]="msgs"></p-messages> -->
+</div>

@@ -1,0 +1,48 @@
+[
+  {
+    "label": "Inicio",
+    "icon": "master",
+    "routerLink": [
+      "/"
+    ],
+    "selected": true,
+    "expanded": true
+  },
+  {
+    "label": "Test",
+    "icon": "palette",
+    "partialSelection": null,
+    "selected": true,
+    "expanded": true,
+    "items": [
+      {
+        "label": "Test 1",
+        "icon": "brush",
+        "routerLink": [
+          "test1"
+        ],
+        "selected": true,
+        "expanded": true
+      }
+    ]
+  },
+  {
+    "label": "Config. Usuarios",
+    "icon": "palette",
+    "partialSelection": null,
+    "selected": true,
+    "expanded": true,
+    "items": [
+      {
+        "label": "Usuarios",
+        "icon": "brush",
+        "routerLink": [
+          "usuario"
+        ],
+        "selected": true,
+        "expanded": true
+      }
+    ]
+  }
+
+]

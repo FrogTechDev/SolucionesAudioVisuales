@@ -181,7 +181,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     ngAfterViewInit() {
         this.layoutContainer = <HTMLDivElement> this.layourContainerViewChild.nativeElement;
-        setTimeout(() => {this.layoutMenuScrollerViewChild.moveBar(); }, 100);
+        // setTimeout(() => {this.layoutMenuScrollerViewChild.moveBar(); }, 100);
     }
 
     onLayoutClick() {

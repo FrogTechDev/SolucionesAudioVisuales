@@ -4,6 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { AuthGuard } from './site/service/auth.guard';
 import {AppRoutes} from './app.routes';
 
 import { AccordionModule } from 'primeng/accordion';
@@ -80,6 +81,11 @@ import {AppFooterComponent} from './app.footer.component';
 import {AppRightpanelComponent} from './app.rightpanel.component';
 import {AppInlineProfileComponent} from './app.profile.component';
 import {DashboardDemoComponent} from './site/view/dashboarddemo.component';
+import { LoginComponent } from './site/components/login/login.component';
+import { LayoutComponent } from './site/components/layout/layout.component';
+import { ListComponent } from './site/view/usuarios/list/list.component';
+import { CreateComponent } from './site/view/usuarios/create/create.component';
+import { EditComponent } from './site/view/usuarios/edit/edit.component';
 
 @NgModule({
     imports: [
@@ -162,10 +168,16 @@ import {DashboardDemoComponent} from './site/view/dashboarddemo.component';
         AppFooterComponent,
         AppRightpanelComponent,
         AppInlineProfileComponent,
-        DashboardDemoComponent
+        DashboardDemoComponent,
+        LoginComponent,
+        LayoutComponent,
+        ListComponent,
+        CreateComponent,
+        EditComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
+        AuthGuard
         // CarService, CountryService, EventService, NodeService, BreadcrumbService
     ],
     bootstrap: [AppComponent]

@@ -31,8 +31,9 @@
         "primeng": "6.1.2",
         "quill": "1.1.8",
         "rxjs": "6.2.2",
-        "zone.js": "0.8.26",
-        "web-animations-js": "2.3.1"
+        "rxjs-compat": "^6.3.3",
+        "web-animations-js": "2.3.1",
+        "zone.js": "0.8.26"
     },
     "devDependencies": {
         "@angular/compiler-cli": "6.1.1",

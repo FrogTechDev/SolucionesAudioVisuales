@@ -1,0 +1,54 @@
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="card card-w-title">
+            <h1>{{title}}</h1>
+            <div class="ui-g">
+                <div class="ui-g-6 ui-md-6 ui-lg-6 ui-sm-12">
+                    <form #usuarioForm class="form-login" (ngSubmit)="onSubmit(usuarioForm)">
+                        <div class="ui-g-12 form-group">
+                            <span class="md-inputfield">
+                                <input type="text" name="Nombre" #Nombre="ngModel" [(ngModel)]="user.Nombre" class="form1 ui-inputtext ui-corner-all ui-state-default ui-widget"
+                                    required pInputText/>
+                                <label>Nombre</label>
+                            </span>
+                            <span *ngIf="!Nombre.valid && Nombre.touched">El Nombre no es valido</span>
+                        </div>
+                        <div class="ui-g-12">
+                            <span class="md-inputfield">
+                                <input type="text" name="Usuario" #Usuario="ngModel" [(ngModel)]="user.Usuario" class="form1 ui-inputtext ui-corner-all ui-state-default ui-widget"
+                                    required pInputText/>
+                                <label>Usuario</label>
+                            </span>
+                            <span *ngIf="!Usuario.valid && Usuario.touched">El usuario no es valido</span>
+                        </div>
+                        <div class="ui-g-12">
+                            <span class="md-inputfield">
+                                <input type="email" name="Correo" #Correo="ngModel" [(ngModel)]="user.Correo" class="form1 ui-inputtext ui-corner-all ui-state-default ui-widget"
+                                    required pInputText/>
+                                <label>Correo</label>
+                            </span>
+                            <span *ngIf="!Correo.valid && Correo.touched">El correo no es valido</span>
+                        </div>
+                        <div class="ui-g-12">
+                            <span class="md-inputfield">
+                                <input type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password"
+                                    class="ui-inputtext ui-corner-all ui-state-default ui-widget form1" required pInputText />
+                                <label>Contraseña</label>
+                            </span>
+                            <span *ngIf="!Password.valid && Password.touched">La contraseña no es valida</span>
+                        </div>
+                        <div class="ui-g-12">
+                            <input type="submit" value="Guardar" class="form1 ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" />
+                            <button type="button" class="form1 secondary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+                                <span class="ui-button-text ui-c">Cancelar</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ui-g-6 ui-md-6 ui-lg-6 ui-sm-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
