@@ -1,3 +1,13 @@
 El proyecto en angular esta en la carpeta cliente.
 Antes de ejecutar el proyecto se debe instalar las dependecias con npm i o npm install
 Una vez instaladas las dependecias se puede ejecutar la aplicacion con npm start
+cambiar la url del servicio en el archivo \cliente\src\app\site\service\global.ts
+
+
+El backend esta en laravel y se encuentra en la carpeta servidor
+Se debe instalar las dependencias con composer install
+
+es recomendable usar un vhost para laravel
+
+
+
